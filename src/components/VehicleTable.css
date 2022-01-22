@@ -1,0 +1,20 @@
+.vehicleTable,
+.vehiclesList {
+  margin-top: 50px;
+  color: white;
+}
+
+table,
+th,
+td {
+  background-color: #282c34;
+
+  border: 3px solid rgb(255, 255, 255);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  color: rgb(255, 255, 255);
+  padding: 25px;
+}

@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import r2d2 from "../src/images/star_wars_icon_tashlil_2.png";
+import VehicleTable from "./components/VehicleTable";
+import PlanetsPopulation from "./components/PlanetsPopulation";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p style={{ color: "white", alignSelf: "flex-start", margin: "66px 0 0 74px" }}>
+        © Mark Kirzhner
+      </p>
+      <img
+        alt="R2D2"
+        style={{ maxWidth: "200px", maxHeight: "200px", marginTop: "50px" }}
+        src={r2d2}
+      ></img>
+      <VehicleTable />
+      <PlanetsPopulation />
     </div>
   );
 }
