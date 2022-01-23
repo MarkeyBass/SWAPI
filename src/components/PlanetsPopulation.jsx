@@ -3,7 +3,6 @@ import { useState } from "react";
 
 const PlanetsPopulation = () => {
   const [planetsState, setPlanetsState] = useState([]);
-  let tempPlanetsState = [];
 
   const [error, setError] = useState(null);
 
@@ -48,32 +47,28 @@ const PlanetsPopulation = () => {
 
       console.log({ planets });
 
-      tempPlanetsState = planets;
+      setPlanetsState(planets);
     } catch (err) {
       setError(err.message);
       console.log(err);
     }
   };
 
-  const worker = async () => {
-    await fetchplanets();
-
-    setPlanetsState(tempPlanetsState);
-  };
-
   useEffect(() => {
-    worker();
+    fetchplanets();
   }, []);
 
   const output = (
     <div style={{ color: "white", margin: "50px 0" }}>
       {planetsState.length > 0 && (
         <Fragment>
-          <p>Comparison of planets population. Chart bar proportions are only for illustration.</p>
-          <p>
-            Planets with unknown population have a <span style={{ color: "red" }}> red</span> bar
-          </p>
-
+          <div style={{ margin: "30px 0 5px 0" }}>
+            <p>
+              Comparison of planets population. Chart bar proportions are only for illustration.
+            </p>
+            Planets with unknown population have a <span style={{ color: "red" }}> red</span> bar.
+            <p></p>
+          </div>
           <div
             style={{
               display: "flex",

@@ -13,9 +13,11 @@ function App() {
       <img
         alt="R2D2"
         style={{ maxWidth: "200px", maxHeight: "200px", marginTop: "50px" }}
+        // style={{ maxWidth: "200px" }}
         src={r2d2}
       ></img>
       <VehicleTable />
+
       <PlanetsPopulation />
     </div>
   );
